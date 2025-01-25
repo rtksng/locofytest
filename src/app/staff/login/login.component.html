@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="box">Image</div>
+    <div *ngIf="showSignInScreen" class="box"><app-sign-in></app-sign-in></div>
+    <div *ngIf="showOtpVerificationScreen" class="box"><app-otp-verification></app-otp-verification></div>
+    <div *ngIf="showForgotPasswordScreen" class="box"><app-forgot-password></app-forgot-password></div>
+    <div *ngIf="showForgotPasswordOtpVerificationScreen" class="box">
+        <app-forgot-password-otp-verification></app-forgot-password-otp-verification>
+    </div>
+    <div *ngIf="showSetNewPasswordScreen" class="box">
+        <app-set-new-password></app-set-new-password>
+    </div>
+</div>

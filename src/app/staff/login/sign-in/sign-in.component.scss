@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.forgot-password-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

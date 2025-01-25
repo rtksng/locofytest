@@ -1,0 +1,52 @@
+<div class="container">
+
+    <div class="box">Image</div>
+    <div *ngIf="showCustomerLogin" class="box">
+        <h2>Login</h2>
+        <p>Your wellness is our priority, securely managed in trusted hands</p>
+
+        <form [formGroup]="clientLoginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="clientEmail" type="text" formControlName="email" placeholder="Enter your email address" />
+                <div *ngIf="clientLoginForm.get('email')?.invalid && clientLoginForm.get('email')?.touched"
+                    class="error-message">
+                    {{ getErrorMessage('email') }}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="clientPassword" type="password" formControlName="password"
+                    placeholder="Enter your password" />
+                <div *ngIf="clientLoginForm.get('password')?.invalid && clientLoginForm.get('password')?.touched"
+                    class="error-message">
+                    {{ getErrorMessage('password') }}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <a (click)="forgotPasswordClicked()" class="click-link">Forgot password?</a>
+            </div>
+
+            <button type="submit" [disabled]="clientLoginForm.invalid">Login</button>
+        </form>
+        <p>Don't have an account?
+            <a href="signup" class="click-link">
+                Create now
+            </a>
+        </p>
+    </div>
+    <div *ngIf="showCustomerForgotPassScreen" class="box">
+        <app-customer-forgot-password></app-customer-forgot-password>
+    </div>
+    <div *ngIf="showCustomerOtpScreen" class="box">
+        <app-customer-otp-verification></app-customer-otp-verification>
+    </div>
+    <div *ngIf="showCustomerForgotOtpScreen" class="box">
+        <app-customer-forgot-otp-verification></app-customer-forgot-otp-verification>
+    </div>
+    <div *ngIf="showCustomerNewPasswordScreen" class="box">
+        <app-set-password></app-set-password>
+    </div>
+</div>

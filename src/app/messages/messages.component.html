@@ -1,0 +1,8 @@
+<div *ngIf="isInvalid" class="error-message">
+    <small *ngIf="requiredError">This field is required.</small>
+    <small *ngIf="minLengthError">Email must be at least 4 characters long.</small>
+    <small *ngIf="emailError">Please enter a valid email format.</small>
+    <small *ngIf="invalidEmail">Please enter a valid email format(with special chars).</small>
+    <small *ngIf="invalidPassword">Please Aa-Zz, 0-9, Special characters.</small>
+    <small *ngIf="phoneValidator">Please add +, 0-9 digits</small>
+</div>

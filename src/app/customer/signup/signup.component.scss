@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+}
+
+.box {
+    flex: 1;
+}
+
+.click-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}

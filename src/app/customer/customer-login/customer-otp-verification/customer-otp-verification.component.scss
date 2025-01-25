@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+}
+
+.box {
+    flex: 1;
+}
+
+.back-to-login {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.back-to-login-link {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-to-login-link:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
